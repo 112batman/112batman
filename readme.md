@@ -1,1 +1,2 @@
 [![112batman's github stats](https://github-readme-stats.vercel.app/api?username=112batman&show_icons=true&theme=radical&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=112batman&repo=bigbrainbot-website)](https://github.com/anuraghazra/github-readme-stats)
