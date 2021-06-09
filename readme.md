@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Hello, I'm 112batman</h1>
+    <h1>Hello, I'm Tijn Hoftijzer</h1>
     <br />
     <a href="https://github.com/112batman"><img src="https://img.shields.io/badge/-GITHUB-blue?style=for-the-badge&logo=Github"></a>
     <a href="https://112batman.github.io"><img src="https://img.shields.io/badge/-WEBSITE-blue?style=for-the-badge&logo=RSS"></a>
