@@ -6,16 +6,43 @@
         <i>I'm a hobbyist developer who makes random things some of which are even usefull :)</i>
         <br />
         <br />
-        <div style="display: flex; justify-content: space-evenly;">
-            <a href="https://github.com/112batman" target="_blank"><badge name="GITHUB" logo="GitHub"></badge></a>
-            <a href="https://112batman.github.io" target="_blank"><badge name="WEBSITE" logo="RSS"></badge></a>
-            <badge name="112batman#6524" logo="Discord"></badge>
-            <a href="https://open.spotify.com/user/bbkynae4bptyh6n5orsvf3aw0?si=de91cca74c214f79" target="_blank"><badge name="SPOTIFY" logo="Spotify"></badge></a>
-        </div>
+        <table layout>
+            <tr>
+                <td>
+                    <div>
+                        <a href="https://github.com/112batman" target="_blank"><badge name="GITHUB" logo="GitHub"></badge></a>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 10px;"></div>
+                </td>
+                <td>
+                    <div>
+                        <a href="https://112batman.github.io" target="_blank"><badge name="WEBSITE" logo="RSS"></badge></a>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 10px;"></div>
+                </td>
+                <td>
+                    <div>
+                        <badge name="112batman#6524" logo="Discord"></badge>
+                    </div>
+                </td>
+                <td>
+                    <div style="width: 10px;"></div>
+                </td>
+                <td>
+                    <div>
+                        <a href="https://open.spotify.com/user/bbkynae4bptyh6n5orsvf3aw0?si=de91cca74c214f79" target="_blank"><badge name="SPOTIFY" logo="Spotify"></badge></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
     <br />
     <div>
-        <table>
+        <table layout>
             <tr>
                 <td style="width: 50%;">
                     <div>
@@ -66,7 +93,7 @@
     <div align="center">
         <h2>My GitHub statistics</h2>
     </div>
-    <table>
+    <table layout>
         <tr>
             <td style="width: 50%;">
                 <div>

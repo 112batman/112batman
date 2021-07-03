@@ -44,6 +44,11 @@ function createBadge(self: Cheerio<Node>): Cheerio<Node> {
     return badgeTable
 }
 
+function marginPaddingZero(self: Cheerio<Node>) {
+    self.css('margin', '0')
+    self.css('padding', '0')
+}
+
 const clean: gulp.TaskFunction = (cb) => {
     if(fs.existsSync('readme.md')) {
         fs.unlink('readme.md', cb)
@@ -72,6 +77,10 @@ const build: gulp.TaskFunction = (cb) => {
             
             levelIndicatorColumn.append(levelIndicator)
 
+            const spacerColumn = cheerio('<td></td>')
+            spacerColumn.append(createSpacer(10))
+
+            row.append(spacerColumn)
             row.append(levelIndicatorColumn)
 
             self.append(techBadge)
@@ -111,6 +120,22 @@ const build: gulp.TaskFunction = (cb) => {
             project.append(descriptionEl)
 
             self.append(project)
+        })
+
+        $.find('table[layout]').each(function() {
+            const self = $.find(this)
+
+            self.css('border', '0')
+            self.css('cellpadding', '0')
+            self.css('cellspacing', '0')
+            marginPaddingZero(self)
+
+            self.find('tr').each(function() {
+                marginPaddingZero(self.find(this))
+            })
+            self.find('td').each(function() {
+                marginPaddingZero(self.find(this))
+            })
         })
 
         const outerWrapper = cheerio('<div></span>')
