@@ -1,7 +1,10 @@
 <div><div>
     <!-- The readme.md source is in _readme.md, readme.md contains the generated output -->
     <!-- Table layout is used due to flex not being supported in GFM -->
+    <!-- Sadly, there's nothing possible to hide the table borders that appear on the GitHub preview -->
     <div align="center">
+        <i>Disclaimer: The table borders on this readme cannot be hidden</i>
+        <br>
         <h1>Hi! I'm Tijn Hoftijzer</h1>
         <i>I'm a hobbyist developer who makes random things some of which are even usefull :)</i>
         <br>
