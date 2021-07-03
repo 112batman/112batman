@@ -30,15 +30,18 @@ function createBadge(self: Cheerio<Node>): Cheerio<Node> {
 
     self.html('')
 
-    const badge = cheerio('<div></div>')
-    badge.css('display', 'flex')
+    const badgeTable = cheerio('<table></table>')
+    const badgeRow = cheerio('<tr></tr>')
+    const badgeColumn = cheerio('<td></td>')
 
     const shield = cheerio('<img></img>')
     shield.attr('src', `https://img.shields.io/badge/-${name}-${color}?style=for-the-badge&logo=${logo}`)
     
-    badge.append(shield)
+    badgeColumn.append(shield)
+    badgeRow.append(badgeColumn)
+    badgeTable.append(badgeRow)
 
-    return badge
+    return badgeTable
 }
 
 const clean: gulp.TaskFunction = (cb) => {
@@ -61,12 +64,15 @@ const build: gulp.TaskFunction = (cb) => {
             let level = Number(self.attr('level')); level = isNaN(level) ? 0 : level
 
             const techBadge = createBadge(self)
+            const row = techBadge.children('tr')
 
+            const levelIndicatorColumn = cheerio('<td></td>')
             const levelIndicator = cheerio('<span></span>')
             levelIndicator.text(`${'●'.repeat(level)}${'○'.repeat(5 - level)}`)
             
-            techBadge.append(createSpacer(10))
-            techBadge.append(levelIndicator)
+            levelIndicatorColumn.append(levelIndicator)
+
+            row.append(levelIndicatorColumn)
 
             self.append(techBadge)
         })
